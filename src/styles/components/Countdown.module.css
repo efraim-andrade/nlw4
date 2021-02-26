@@ -22,6 +22,7 @@
 
 .countdownContainer > div span {
   flex: 1;
+  width: 80px;
 }
 
 .countdownContainer > div span:first-child {
@@ -56,6 +57,22 @@
   transition: background-color 0.2s;
 }
 
-.countdownButton:hover {
+.countdownButton:not(:disabled):hover {
   background: var(--blue-dark);
+}
+
+.countdownButton:disabled {
+  color: var(--text);
+  cursor: not-allowed;
+  background: var(--white);
+}
+
+.countdownButtonActive {
+  color: var(--title);
+  background: var(--white);
+}
+
+.countdownButtonActive:hover {
+  color: var(--white);
+  background: var(--red);
 }
